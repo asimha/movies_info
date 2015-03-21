@@ -12,4 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= css/bootstrap-theme
+ *= css/bootstrap
+ *= css/bootstrap.min
+ *= css/bootstrap-theme.min
+ *= css/font-awesome
+ *= css/font-awesome.min
+ *= css/style
+ 
  */
