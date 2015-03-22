@@ -1,24 +1,25 @@
 Rails.application.routes.draw do
-  get 'movies/new'
-
-  get 'movies/create'
-
-  get 'movies/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'movies#index'
+  root 'movies#home'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    get 'movies/kannada' => 'movies#kannada'
+    get 'movies/tamil' => 'movies#tamil'
+    get 'movies/telagu' => 'movies#telagu'
+    get 'movies/malyalam' => 'movies#malyalam'
+    get 'movies/hindhi' => 'movies#hindhi'
+    get 'movies/english' => 'movies#english'
+    get 'movies/others' => 'movies#kannada'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    resources :movies
 
   # Example resource route with options:
   #   resources :products do
