@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= js .
 //= conact_me
 //= jquery-2.1.1.min
 //= jquery.appear
