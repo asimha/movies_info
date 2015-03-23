@@ -19,3 +19,6 @@
 //= jquery.appear
 //= script
 //= modernizr.custom
+//= bootstrap
+//= bootstrap.min
+//= utilities

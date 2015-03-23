@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+get "log_out" => "sessions#destroy", :as => "log_out"
+get "log_in" => "sessions#new", :as => "log_in"
+get "sign_up" => "users#new", :as => "sign_up"
+resources :users
+resources :sessions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,9 +17,9 @@ Rails.application.routes.draw do
     get 'movies/tamil' => 'movies#tamil'
     get 'movies/telagu' => 'movies#telagu'
     get 'movies/malyalam' => 'movies#malyalam'
-    get 'movies/hindhi' => 'movies#hindhi'
+    get 'movies/hindi' => 'movies#hindi'
     get 'movies/english' => 'movies#english'
-    get 'movies/others' => 'movies#kannada'
+    get 'movies/others' => 'movies#others'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

@@ -1,11 +1,18 @@
 class MoviesController < ApplicationController
 
+before_filter :require_login, except: [:home] 
+
   def new
     @movie = Movie.new
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   def create
     @movie = Movie.new(movies_params)
+    @movie.owner_id = current_user.id
    if @movie.save
       redirect_to root_path
     else
@@ -27,8 +34,8 @@ class MoviesController < ApplicationController
     @movies = Movie.where("language = ?", 'kannada')
   end
 
-  def hindhi
-    @movies = Movie.where("language = ?", 'hindhi')
+  def hindi
+    @movies = Movie.where("language = ?", 'hindi')
   end
 
   def tamil
