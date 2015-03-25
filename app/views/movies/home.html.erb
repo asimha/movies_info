@@ -56,7 +56,9 @@
             </div>
         </section>
         <!-- End Logo Section -->
-        
+        <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: name %>
+        <% end -%>
         <!-- Start Main Body Section -->
         <div class="mainbody-section text-center">
             <div class="container">
