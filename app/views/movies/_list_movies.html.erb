@@ -1,4 +1,12 @@
 <div class="modal-content">
+<center>
+    <%= form_tag movies_kannada_path, :method => 'get' do %>
+            <p>
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "Search", :name => nil %>
+            </p>
+    <% end %>
+</center>
 <div class="container">
 <h4 class="match-heading-link"></h4>
 <div class="row">

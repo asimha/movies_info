@@ -26,6 +26,8 @@ gem 'pg', group: :production
 
 gem "bcrypt-ruby", :require => "bcrypt"
 
+gem 'rabl'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

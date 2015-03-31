@@ -31,31 +31,31 @@ before_filter :require_login, except: [:home]
   end
 
   def kannada
-    @movies = Movie.where("language = ?", 'kannada')
+    @movies = Movie.search(params[:search], 'kannada')
   end
 
   def hindi
-    @movies = Movie.where("language = ?", 'hindi')
+    @movies = Movie.search(params[:search], 'hindi')
   end
 
   def tamil
-    @movies = Movie.where("language = ?", 'tamil')
+    @movies = Movie.search(params[:search], 'tamil')
   end
 
   def telagu
-    @movies = Movie.where("language = ?", 'telagu')
+    @movies = Movie.search(params[:search], 'telagu')
   end
 
   def malyalam
-    @movies = Movie.where("language = ?", 'malyalam')
+    @movies = Movie.search(params[:search], 'malyalam')
   end
 
   def english
-    @movies = Movie.where("language = ?", 'english')
+    @movies = Movie.search(params[:search], 'english')
   end
 
   def others
-    @movies = Movie.where("language = ?", 'others')
+    @movies = Movie.search(params[:search], 'others')
   end
 
   private
@@ -63,5 +63,4 @@ before_filter :require_login, except: [:home]
   def movies_params
     params.require(:movie).permit(:name, :language, :owner_id, :rating)
   end
-
 end
